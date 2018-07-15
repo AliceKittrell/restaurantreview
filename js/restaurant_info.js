@@ -1,6 +1,12 @@
 let restaurant;
 var newMap;
 
+// remove class 'inside' from body element if we detect a mobile phone
+if (window.screen.width < 500) {
+  console.log('we have a mobile in our hands!');
+  document.getElementsByTagName('body')[0].setAttribute('class', '');
+}
+
 /**
  * Initialize map as soon as the page is loaded.
  */
