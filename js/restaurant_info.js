@@ -2,7 +2,7 @@ let restaurant;
 var newMap;
 
 // remove class 'inside' from body element if we detect a mobile phone
-if (window.screen.width < 500) {
+if (window.screen.width < 500 && window.screen.orientation.type === 'portrait-primary') {
   console.log('we have a mobile in our hands!');
   document.getElementsByTagName('body')[0].setAttribute('class', '');
 }
