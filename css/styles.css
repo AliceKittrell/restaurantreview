@@ -1,6 +1,34 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* CSS Grid setup */
+
+header {
+	grid-area: header;
+}
+
+
+main {
+	grid-area: main;
+}
+
+
+footer {
+	grid-area: footer;
+}
+
+.container {
+	display: grid;
+	grid-template-areas:
+				"header header"
+				"main main"
+				"footer footer";
+	grid-gap: 0px 30px;
+}
+
+
+/* End Grid Layout */
+
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
@@ -54,14 +82,15 @@ nav {
   height: 80px;
   background-color: #252831;
   text-align:center;
+	display: flex;
 }
 nav h1 {
   margin: auto;
 }
 nav h1 a {
-  color: #fff;
-  font-size: 14pt;
-  font-weight: 200;
+  color: orange;
+  font-size: 2vh; /* auto size header font */
+  font-weight: 400;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
