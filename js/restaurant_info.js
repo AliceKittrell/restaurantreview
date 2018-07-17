@@ -180,6 +180,7 @@ const createReviewHTML = (review) => {
   const reviewCap = document.createElement('div');
   reviewCap.className = 'review-cap';
   reviewCap.setAttribute('role', 'heading');
+    reviewCap.setAttribute('label', `Reviewed by ${review.name} on ${review.date}`);
 
   const name = document.createElement('p');
   name.className = 'rName';
@@ -190,7 +191,6 @@ const createReviewHTML = (review) => {
   date.className = 'rDate';
   date.innerHTML = review.date;
   reviewCap.appendChild(date);
-  reviewCap.setAttribute('label', `Reviewed by ${name} on ${date}`);
   li.appendChild(reviewCap);
 
 
