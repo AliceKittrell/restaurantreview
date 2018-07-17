@@ -167,7 +167,6 @@ const createRestaurantHTML = (restaurant) => {
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
-  name.title = restaurant.name;
   li.append(name);
 
   const neighborhood = document.createElement('p');
