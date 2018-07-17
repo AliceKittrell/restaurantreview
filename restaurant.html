@@ -16,13 +16,13 @@
   <div class="container">
 
     <!-- Beginning header -->
-    <header>
+    <header role="logo">
       <!-- Beginning nav -->
       <nav>
         <h1><a href="/">Restaurant Reviews</a></h1>
       </nav>
       <!-- Beginning breadcrumb -->
-      <ul id="breadcrumb" >
+      <ul id="breadcrumb" role="navigation" aria-label="breadcrumb">
         <li><a href="/">Home</a></li>
       </ul>
       <!-- End breadcrumb -->
@@ -31,14 +31,14 @@
     <!-- End header -->
 
     <!-- Beginning main -->
-    <main id="maincontent-restaurants">
+    <main id="maincontent-restaurants" role="main">
       <!-- Beginning map -->
-      <section id="map-container" aria-hidden="true" role="application" tabindex="-1">
-        <div id="map" aria-hidden="true" role="application" tabindex="-1" ></div>
+      <section id="map-container" role="application" aria-label="Mapbox Map">
+        <div id="map"></div>
       </section>
       <!-- End map -->
       <!-- Beginning restaurant -->
-      <section id="restaurant-container">
+      <section id="restaurant-container" aria-labelledby="restaurant-name">
         <h1 id="restaurant-name"></h1>
         <figure>
           <img id="restaurant-img">
@@ -53,14 +53,14 @@
       <!-- end restaurant -->
       <!-- Beginning reviews -->
       <section id="reviews-container">
-        <ul id="reviews-list"></ul>
+        <ul id="reviews-list" aria-label="Reviews"></ul>
       </section>
       <!-- End reviews -->
     </main>
     <!-- End main -->
 
     <!-- Beginning footer -->
-    <footer id="footer">
+    <footer id="footer" role="contentinfo">
       Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
     </footer>
 
