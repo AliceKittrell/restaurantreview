@@ -229,20 +229,20 @@ const getParameterByName = (name, url) => {
 
 
 // settabindex's to -1 in map element
-
-const hideMapTabs = () => {
-document.getElementById('map').setAttribute('tabindex', -1);
-(document.querySelectorAll('.leaflet-marker-pane')[0].childNodes).forEach(function(cur) {
-  cur.setAttribute('tabindex', -1);
-});
-(document.querySelectorAll('.leaflet-control-zoom')[0].childNodes).forEach(function (cur) {
-  cur.setAttribute('tabindex', -1);
-});
-(document.querySelectorAll('.leaflet-control-attribution')[0].childNodes).forEach(function (cur, i) {
-  if (i === 0 || i % 2 === 0) {
-      cur.setAttribute('tabindex', -1);
-  }
-
-})
-};
-window.onload = hideMapTabs;
+//
+// const hideMapTabs = () => {
+// document.getElementById('map').setAttribute('tabindex', -1);
+// (document.querySelectorAll('.leaflet-marker-pane')[0].childNodes).forEach(function(cur) {
+//   cur.setAttribute('tabindex', -1);
+// });
+// (document.querySelectorAll('.leaflet-control-zoom')[0].childNodes).forEach(function (cur) {
+//   cur.setAttribute('tabindex', -1);
+// });
+// (document.querySelectorAll('.leaflet-control-attribution')[0].childNodes).forEach(function (cur, i) {
+//   if (i === 0 || i % 2 === 0) {
+//       cur.setAttribute('tabindex', -1);
+//   }
+//
+// })
+// };
+// window.onload = hideMapTabs;
