@@ -115,6 +115,7 @@ nav h1 a {
   font-weight: 400;
   letter-spacing: 10px;
   text-transform: uppercase;
+  margin-left: 8px;
 }
 #breadcrumb {
   padding: 10px 40px 16px;
@@ -456,7 +457,7 @@ nav h1 a {
     width: 47%;
     border-bottom: none;
     border-top: none;
-    padding: 140px 10px;
+    padding: 140px 10px 20px;
     float: left;
   }
 }
@@ -466,7 +467,7 @@ nav h1 a {
   #reviews-container {
     border-bottom: none;
     border-top: none;
-    padding: 140px 15px 15px;
+    padding: 140px 15px 20px;
     float: left;
     margin-left: 10px;
   }
