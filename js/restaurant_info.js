@@ -179,6 +179,7 @@ const createReviewHTML = (review) => {
   const li = document.createElement('li');
   const reviewCap = document.createElement('div');
   reviewCap.className = 'review-cap';
+  reviewCap.setAttribute('role', 'heading');
 
   const name = document.createElement('p');
   name.className = 'rName';
@@ -189,7 +190,9 @@ const createReviewHTML = (review) => {
   date.className = 'rDate';
   date.innerHTML = review.date;
   reviewCap.appendChild(date);
+  reviewCap.setAttribute('label', `Reviewed by ${name} on ${date}`);
   li.appendChild(reviewCap);
+
 
   const rating = document.createElement('span');
   rating.className = 'rating';
