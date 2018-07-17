@@ -372,10 +372,10 @@ nav h1 a {
   display: flex;
   justify-content: space-between;
   vertical-align: middle;
-  background-color: #333;
+  background-color: #02437c;
   margin-left: -30px;
   margin-right: -30px;
-  padding: 1em 2em 0.5em 2em;
+  padding: 0 2em 0 2em;
   margin-bottom: 15px;
 }
 
@@ -387,7 +387,7 @@ nav h1 a {
 }
 
 .rDate {
-  color: #ccc;
+  color: #c5d79b;
   padding-top: 8px;
 }
 
@@ -395,7 +395,7 @@ nav h1 a {
   background-color: #02437c;
   padding: 0.2em 0.4em;
   text-transform: uppercase;
-  color: #c5d79b;
+  color: #ffeb3b;
 }
 
 /* Media Queries */
