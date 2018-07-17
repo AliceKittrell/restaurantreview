@@ -104,22 +104,25 @@ const fillRestaurantHTML = (restaurant = self.restaurant) => {
   // fill operating hours
   if (restaurant.operating_hours) {
 
-
-    // for every day
-    for (day in restaurant.operating_hours) {
-        // if restaurant closes for meal change
-        if ((restaurant.operating_hours[day]).includes(',')) {
-          //  split the hours at the comma
-          let hoursArray = restaurant.operating_hours[day].split(',')
-          // set up a linebreak
-          let lBreak = "<br>";
-          // add the line break at the beginning of each set of hours so it lines up correcty in the DOM
-          hoursArray[0] = lBreak.concat(hoursArray[0]);
-          hoursArray[1] = lBreak.concat(hoursArray[1]);
-          // set the new display for the operating hours
-          restaurant.operating_hours[day] = hoursArray;
-        }
+    // Logic to break Days with Meal Change hours into two lines for styling purposes
+    if (window.screen.width < 1024) {
+      // for every day
+      for (day in restaurant.operating_hours) {
+          // if restaurant closes for meal change
+          if ((restaurant.operating_hours[day]).includes(',')) {
+            //  split the hours at the comma
+            let hoursArray = restaurant.operating_hours[day].split(',')
+            // set up a linebreak
+            let lBreak = "<br>";
+            // add the line break at the beginning of each set of hours so it lines up correcty in the DOM
+            hoursArray[0] = lBreak.concat(hoursArray[0]);
+            hoursArray[1] = lBreak.concat(hoursArray[1]);
+            // set the new display for the operating hours
+            restaurant.operating_hours[day] = hoursArray;
+          }
+      }
     }
+
 
     fillRestaurantHoursHTML();
   }
