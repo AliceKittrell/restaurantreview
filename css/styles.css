@@ -405,6 +405,11 @@ nav h1 a {
   #reviews-list li {
     padding: 0 1em 1em 1em;
   }
+
+  #breadcrumb {
+    padding: 15px 40px 15px;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -456,11 +461,18 @@ nav h1 a {
 @media screen and (min-width: 1366px) {
   #restaurant-container,
   #reviews-container {
-    width: 47%;
     border-bottom: none;
     border-top: none;
-    padding: 140px 15px;
+    padding: 140px 15px 15px;
     float: left;
     margin-left: 10px;
+  }
+
+  #restaurant-container {
+    width: 32%;
+  }
+
+  #reviews-container {
+    width: 62%;
   }
 }
