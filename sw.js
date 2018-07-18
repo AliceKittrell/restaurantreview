@@ -1,4 +1,4 @@
-const staticCacheName = 'restaurant-reviews-v3';
+const staticCacheName = 'restaurant-reviews-v1';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -28,8 +28,7 @@ const urlsToCache = [
   'js/dbhelper.js',
   'js/main.js',
   'js/restaurant_info.js',
-  'js/reg_serviceWorker.js',
-  '/sw.js'
+  'js/reg_serviceWorker.js'
 ];
 
 self.addEventListener('install', event => {
@@ -144,10 +143,10 @@ self.addEventListener('fetch', function(event) {
 
 // TODO: listen for the 'message' event, and call
 // skipWaiting if you get the appropriate message
-self.addEventListener('message', function (event) {
-  // so when the user clicks the refresh button, we send a message to the worker, telling it to call self.skipWaiting();
-  // event.data; // the message
-  if (event.data.action == 'skipWaiting') {
-    self.skipWaiting();
-  }
-});
+// self.addEventListener('message', function (event) {
+//   // so when the user clicks the refresh button, we send a message to the worker, telling it to call self.skipWaiting();
+//   // event.data; // the message
+//   if (event.data.action == 'skipWaiting') {
+//     self.skipWaiting();
+//   }
+// });
