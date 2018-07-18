@@ -188,12 +188,15 @@ const createReviewHTML = (review) => {
   const name = document.createElement('p');
   name.className = 'rName';
   name.innerHTML = review.name;
+  // append name to review header
   reviewCap.appendChild(name);
 
   const date = document.createElement('p');
   date.className = 'rDate';
   date.innerHTML = review.date;
+  // append date to review header
   reviewCap.appendChild(date);
+  // append review header to the list element
   li.appendChild(reviewCap);
 
 
