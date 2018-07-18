@@ -7,6 +7,7 @@ var newMap;
 //   document.getElementsByTagName('body')[0].setAttribute('class', '');
 // }
 
+
 /**
  * Initialize map as soon as the page is loaded.
  */
@@ -95,6 +96,7 @@ const fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  // add alt text for Ally
   const altTitleText = `${restaurant.name} in ${restaurant.neighborhood}`;
   image.alt = altTitleText;
 
@@ -177,10 +179,11 @@ const fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 const createReviewHTML = (review) => {
   const li = document.createElement('li');
+  // create header div at top of each review (seen in udacity image example)
   const reviewCap = document.createElement('div');
   reviewCap.className = 'review-cap';
   reviewCap.setAttribute('role', 'heading');
-    reviewCap.setAttribute('label', `Reviewed by ${review.name} on ${review.date}`);
+  reviewCap.setAttribute('aria-label', `Reviewed by ${review.name} on ${review.date}`);
 
   const name = document.createElement('p');
   name.className = 'rName';
