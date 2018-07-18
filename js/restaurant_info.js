@@ -1,3 +1,5 @@
+"use strict";
+
 let restaurant;
 var newMap;
 

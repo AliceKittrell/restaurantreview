@@ -1,3 +1,4 @@
+"use strict";
 // define our cache name to easily find and change it later
 const staticCacheName = 'restaurant-reviews-v1';
 
