@@ -7,16 +7,16 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/restaurant.html',
-  '/restaurant.html?id=1',
-  '/restaurant.html?id=2',
-  '/restaurant.html?id=3',
-  '/restaurant.html?id=4',
-  '/restaurant.html?id=5',
-  '/restaurant.html?id=6',
-  '/restaurant.html?id=7',
-  '/restaurant.html?id=8',
-  '/restaurant.html?id=9',
-  '/restaurant.html?id=10',
+  // '/restaurant.html?id=1',
+  // '/restaurant.html?id=2',
+  // '/restaurant.html?id=3',
+  // '/restaurant.html?id=4',
+  // '/restaurant.html?id=5',
+  // '/restaurant.html?id=6',
+  // '/restaurant.html?id=7',
+  // '/restaurant.html?id=8',
+  // '/restaurant.html?id=9',
+  // '/restaurant.html?id=10',
   'css/styles.css',
   'data/restaurants.json',
   'img/1.jpg',
@@ -34,7 +34,8 @@ const urlsToCache = [
   'js/restaurant_info.js',
   'js/reg_serviceWorker.js',
   'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
-  'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css'
+  'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',
+  'https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.10.0/lazyload.min.js'
 ];
 
 // now that we've registered our service worker, we need to do a few things once it installs
@@ -73,7 +74,8 @@ self.addEventListener('fetch', event => {
   event.respondWith(
 
     // check for a match to the request in the cache
-    caches.match(event.request).then(response => {
+    // {ignorSearch: true} A Boolean that specifies whether to ignore the query string in the URL.  For example, if set to true the ?value=bar part of http://foo.com/?value=bar would be ignored when performing a match. It defaults to false.
+    caches.match(event.request, {ignoreSearch: true}).then(response => {
 
       // if the data already exists in the cache
       if (response) {
