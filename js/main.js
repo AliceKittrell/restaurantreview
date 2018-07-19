@@ -148,6 +148,12 @@ const fillRestaurantsHTML = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     ul.append(createRestaurantHTML(restaurant));
   });
+  //speeds up the web application by loading images, video or iframes as they enter the viewport.
+  // data-src set on line 169 - https://www.andreaverlicchi.eu/lazyload/
+  let myLazyLoad = new LazyLoad({
+    elements_selector: ".restaurant-img"
+  });
+
   addMarkersToMap();
 }
 
@@ -159,7 +165,8 @@ const createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  // LazyLoad attribute - https://www.andreaverlicchi.eu/lazyload/
+  image.setAttribute('data-src', DBHelper.imageUrlForRestaurant(restaurant));
   const altTitleText = `${restaurant.name} in ${restaurant.neighborhood}`;
   image.alt = altTitleText;
   li.append(image);
